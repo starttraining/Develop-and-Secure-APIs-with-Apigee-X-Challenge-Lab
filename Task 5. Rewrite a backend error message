@@ -1,0 +1,8 @@
+Test the API.
+A valid request like this should still work:
+
+curl -i -k -X POST "https://eval.example.com/translate/v1?lang=de" -H "Content-Type:application/json" -H "Key: $KEY" -d '{ "text": "Hello world!" }'
+Copied!
+An invalid language query parameter like this should return the rewritten error message:
+
+curl -i -k -X POST "https://eval.example.com/translate/v1?lang=invalid" -H "Content-Type:application/json" -H "Key: $KEY" -d '{ "text": "Hello world!" }'

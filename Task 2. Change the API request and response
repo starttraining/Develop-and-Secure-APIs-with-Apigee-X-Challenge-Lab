@@ -1,0 +1,11 @@
+List of languages:
+
+curl -i -k -X GET "https://eval.example.com/translate/v1/languages"
+Copied!
+Translate to specified language (German):
+
+curl -i -k -X POST "https://eval.example.com/translate/v1?lang=de" -H "Content-Type:application/json" -d '{ "text": "Hello world!" }'
+Copied!
+Translate to default language (Spanish):
+
+curl -i -k -X POST "https://eval.example.com/translate/v1" -H "Content-Type:application/json" -d '{ "text": "Hello world!" }'

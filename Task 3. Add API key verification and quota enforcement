@@ -1,0 +1,11 @@
+Fails (no API key):
+
+curl -i -k -X POST "https://eval.example.com/translate/v1?lang=de" -H "Content-Type:application/json" -d '{ "text": "Hello world!" }'
+Copied!
+Fails (invalid API key):
+
+curl -i -k -X POST "https://eval.example.com/translate/v1?lang=de" -H "Content-Type:application/json" -H "Key: ABC123" -d '{ "text": "Hello world!" }'
+Copied!
+Succeeds (when KEY variable is set to a valid API key KEY=<get this from the earlier step when setting up a Developer App>):
+
+curl -i -k -X POST "https://eval.example.com/translate/v1?lang=de" -H "Content-Type:application/json" -H "Key: $KEY" -d '{ "text": "Hello world!" }'
